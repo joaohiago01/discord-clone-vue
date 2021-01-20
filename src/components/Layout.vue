@@ -6,10 +6,12 @@
 
 <script>
 import ServerList from '../components/ServerList'
+import ServerName from '../components/ServerName'
 
 export default {
   components: {
-    ServerList
+    ServerList,
+    ServerName
   }
 }
 </script>
