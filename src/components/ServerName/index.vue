@@ -28,13 +28,11 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.9) 0 1px 0 0;
   z-index: 2;
 }
-
 .title {
   color: var(--white);
   font-size: 16px;
   font-weight: bold;
 }
-
 .icon {
   color: var(--white);
   cursor: pointer;
