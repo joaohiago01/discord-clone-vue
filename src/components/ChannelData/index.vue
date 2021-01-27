@@ -1,7 +1,12 @@
 <template>
   <div class="channel-data">
     <div class="messages">
-
+      <ChannelMessage author='Killmor' date='27/01/2021' isBot hasMention>
+        Partiu Among Us?
+      </ChannelMessage>
+      <ChannelMessage author='Gwynbleidd' date='27/01/2021'>
+        <Mention>Killmor</Mention> só vamo
+      </ChannelMessage>
     </div>
     <div class="input-wrapper">
       <input type="text" placeholder="Conversar em #chat-liver" />
@@ -13,13 +18,20 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import At from 'vue-material-design-icons/At'
+import ChannelMessage from '../ChannelMessage'
 
 export default {
   components: {
-    At
+    At,
+    ChannelMessage
   }
 }
+
+Vue.component('Mention', {
+  template: '<span class="mention"><slot /></span>'
+})
 </script>
 
 <style lang='scss' scoped>
@@ -38,6 +50,10 @@ export default {
   height: calc(100vh - 46px - 68px);
   max-height: calc(100vh - 46px - 68px);
   overflow-y: scroll;
+
+  .channel-message:first-child {
+    margin-top: 0;
+  }
 
   &::-webkit-scrollbar {
     width: 8px;
